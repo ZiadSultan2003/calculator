@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* start toggle switch */
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* end toggle switch  */
+/* start dark mode */
+body {
+  padding: 25px;
+  background-color: black;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: white;
+  color: white;
+}
+/* end dark mode */
+.container {
+  width: 500px;
+  height: 600px;
+  background-color: #eee;
+  margin: 10px auto;
+  padding-top: 20px;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 400px;
+    height: 300px;
+  }
+  .textview {
+    width: 350px;
+    height: 100px;
+  }
+}
+.textview {
+  width: 450px;
+  height: 100px;
+  background-color: black;
+  margin: auto;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.number {
+  width: 450px;
+  height: 440px;
+  background-color: black;
+  margin: auto;
+  color: black;
+  margin-top: 20px;
+}
+.style {
+  width: 450px;
+  height: 88px;
+  margin: auto;
+  display: flex;
+}
+.style button {
+  width: 100px;
+  height: 60px;
+  background-color: white;
+  margin: 5px 10px 0 10px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
